@@ -3,13 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 const { validateStep1, validateStep2 } = require('./validation');
-
+const path = require('path');
 const prisma = new PrismaClient();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const path = require('path');
 
+ app.use(cors(
+));
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 app.get('*', (req, res) => {
@@ -17,9 +18,7 @@ app.get('*', (req, res) => {
 });
 
 
- app.use(cors({
-  origin: "https://udyamr.onrender.com"
-}));
+
 
         
 
