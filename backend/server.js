@@ -12,17 +12,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: "http://localhost:5173"
 }));
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
-});
-
-
-
-
-        
-
 app.use(express.json());
 
 // Generate OTP endpoint
@@ -134,6 +123,16 @@ app.post('/api/submit-registration', async (req, res) => {
 app.get('/', (req, res) => {
   res.send('Udyam Registration API is running');
 });
+
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+});
+
+
+
+
 
 // Start server
 app.listen(PORT, () => {
