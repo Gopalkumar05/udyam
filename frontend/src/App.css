@@ -1,0 +1,250 @@
+.two-column-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .two-column-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 3rem 1rem;
+}
+
+.form-container {
+  max-width: 32rem;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.progress-tracker {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+}
+
+.progress-circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.progress-circle.completed {
+  background-color: #22c55e;
+  color: white;
+}
+
+.progress-circle.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.progress-circle.pending {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.progress-label {
+  margin-left: 0.5rem;
+}
+
+.progress-label.highlight {
+  font-weight: bold;
+}
+
+.progress-line {
+  width: 4rem;
+  height: 2px;
+  background-color: #d1d5db;
+  margin: 0 0.5rem;
+}
+
+.step1-container {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.step1-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.btn-generate-otp {
+  display: block;
+  margin-top: 1rem;
+}
+
+.otp-section {
+  margin-top: 1rem;
+}
+
+.btn-verify {
+  display: block;
+  margin-top: 1rem;
+  background-color: #16a34a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-verify:hover {
+  background-color: #15803d;
+}
+
+.step2-container {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.step2-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.step2-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.btn-back {
+  background-color: #6b7280;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-back:hover {
+  background-color: #4b5563;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(59, 130, 246, 0.6);
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-disabled {
+  background-color: #9ca3af;
+  color: #374151;
+  cursor: not-allowed;
+}
+
+.input-wrapper {
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.input-error {
+  border-color: #ef4444 !important;
+}
+
+.input-disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.input-error-text {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #ef4444;
+}
+
+.select-wrapper {
+  margin-bottom: 1rem;
+}
+
+.select-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.select-field {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.select-disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
