@@ -60,6 +60,13 @@ app.post('/api/verify-otp', async (req, res) => {
   }
 });
 
+
+const DEBUG_URL = process.env.DEBUG_URL || '/debug';
+app.get(DEBUG_URL, (req, res) => {
+  res.send('Debug route works');
+});
+
+
 // --- Registration Endpoint ---
 
 app.post('/api/submit-registration', async (req, res) => {
